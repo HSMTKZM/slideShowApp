@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="slideShowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i23-J5-ROk">
+                                <rect key="frame" x="30" y="50" width="315" height="238.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-51-wCb">
+                                <rect key="frame" x="172" y="318.5" width="31" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cpY-Zp-TFs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOM-i5-e5G">
+                                <rect key="frame" x="253" y="318.5" width="66" height="30"/>
+                                <state key="normal" title="再生/停止"/>
+                                <connections>
+                                    <action selector="gostopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWu-ld-xFb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icu-sS-YFu">
+                                <rect key="frame" x="91" y="318.5" width="31" height="30"/>
+                                <state key="normal" title="進む"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="woW-09-oId"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i23-J5-ROk" secondAttribute="trailing" constant="30" id="4PS-T0-oNn"/>
+                            <constraint firstItem="mpq-51-wCb" firstAttribute="leading" secondItem="icu-sS-YFu" secondAttribute="trailing" constant="50" id="9GM-bK-JYF"/>
+                            <constraint firstItem="mpq-51-wCb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9bX-zQ-VvF"/>
+                            <constraint firstItem="i23-J5-ROk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cv6-ZJ-RDA"/>
+                            <constraint firstItem="mpq-51-wCb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YJf-6m-uiw"/>
+                            <constraint firstItem="icu-sS-YFu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b3d-Gi-8Lv"/>
+                            <constraint firstItem="QOM-i5-e5G" firstAttribute="leading" secondItem="mpq-51-wCb" secondAttribute="trailing" constant="50" id="feJ-XC-yHD"/>
+                            <constraint firstItem="QOM-i5-e5G" firstAttribute="top" secondItem="i23-J5-ROk" secondAttribute="bottom" constant="30" id="jNi-ZC-ie3"/>
+                            <constraint firstItem="i23-J5-ROk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="jRs-ox-uV7"/>
+                            <constraint firstItem="i23-J5-ROk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="mOm-vS-JN8"/>
+                            <constraint firstItem="QOM-i5-e5G" firstAttribute="leading" secondItem="mpq-51-wCb" secondAttribute="trailing" constant="50" id="pXd-oO-7TB"/>
+                            <constraint firstItem="QOM-i5-e5G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t3I-AR-t1O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="back" destination="mpq-51-wCb" id="AV9-fM-Ved"/>
+                        <outlet property="imageView" destination="i23-J5-ROk" id="sj2-yN-E0L"/>
+                        <outlet property="nextTappedButton" destination="icu-sS-YFu" id="Kqy-xf-pl7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="27"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="ppS-aL-Oo3">
+            <objects>
+                <viewController storyboardIdentifier="showSegue" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kX8-DL-QdJ" customClass="NextViewController" customModule="slideShowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OTR-ma-8cE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-bp-4ZY">
+                                <rect key="frame" x="30" y="50" width="315" height="567"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGN-S8-9Y1">
+                                <rect key="frame" x="172" y="627" width="31" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="F4E-vl-BwT" kind="unwind" unwindAction="unwind:" id="dMk-1Z-F4o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6TN-bp-4ZY" firstAttribute="centerY" secondItem="OTR-ma-8cE" secondAttribute="centerY" id="4Qg-m4-M2t"/>
+                            <constraint firstItem="PNL-id-pIG" firstAttribute="bottom" secondItem="lGN-S8-9Y1" secondAttribute="bottom" constant="10" id="MYe-db-SPM"/>
+                            <constraint firstItem="6TN-bp-4ZY" firstAttribute="top" secondItem="PNL-id-pIG" secondAttribute="top" constant="30" id="UMc-tu-QTt"/>
+                            <constraint firstItem="lGN-S8-9Y1" firstAttribute="centerX" secondItem="OTR-ma-8cE" secondAttribute="centerX" id="XB0-Fv-r1o"/>
+                            <constraint firstItem="6TN-bp-4ZY" firstAttribute="centerX" secondItem="OTR-ma-8cE" secondAttribute="centerX" id="cHe-KV-SsO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PNL-id-pIG"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextImageView" destination="6TN-bp-4ZY" id="qhD-VL-4Wi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O03-rP-api" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="F4E-vl-BwT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1093.5999999999999" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
